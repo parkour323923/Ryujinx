@@ -15,7 +15,7 @@ namespace Ryujinx.Graphics.OpenGL
         public Framebuffer()
         {
             Handle = GL.GenFramebuffer();
-            
+
             _colors = new TextureView[8];
         }
 
@@ -37,7 +37,7 @@ namespace Ryujinx.Graphics.OpenGL
             else
             {
                 GL.FramebufferTexture(FramebufferTarget.Framebuffer, attachment, color?.Handle ?? 0, 0);
-            }   
+            }
         }
 
         public void AttachDepthStencil(TextureView depthStencil)
